@@ -1,0 +1,158 @@
+:root {
+  --background: #092327;
+  --primary-color: #0b5351;
+  --second-color: #00a9a5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+}
+
+.calculator-content {
+  width: 400px;
+  height: 250px;
+  padding: 48px 24px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.operand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.operand input {
+  width: 150px;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.operand input:focus {
+  border: 2px solid #22c2ba;
+}
+
+.operator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.operator button {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.operator button:nth-child(3) {
+  padding: 10px 0;
+}
+
+.operator button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.btn-reset {
+  margin-top: 30px;
+}
+
+.btn-reset button {
+  height: 40px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-reset button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.result-box {
+  margin: 50px auto;
+  background-color: var(--second-color);
+  width: 100px;
+  height: 100px;
+  padding: 30px 0;
+  border-radius: 5px;
+}
+
+.result-box h2 {
+  text-align: center;
+  font-size: 40px;
+  color: aliceblue;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    justify-content: unset;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .calculator-content {
+    width: 300px;
+  }
+
+  .operator {
+    width: 200px;
+    margin: 30px auto 0;
+    justify-content: space-evenly;
+  }
+
+  .operand input {
+    width: 100px;
+    font-size: 10px;
+    padding: 0;
+  }
+
+  .operator button {
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+  }
+
+  .btn-reset {
+    display: flex;
+  }
+}

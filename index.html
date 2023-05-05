@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kalkulator DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="calculator-content">
+          <div class="operand">
+            <div class="first-operand">
+              <input
+                type="text"
+                name="first-operand"
+                id="first-operand"
+                placeholder="masukkan nomor"
+              />
+            </div>
+            <div class="second-operand">
+              <input
+                type="text"
+                name="second-operand"
+                id="second-operand"
+                placeholder="masukkan nomor"
+              />
+            </div>
+          </div>
+          <div class="operator">
+            <button type="submit" id="addition">+</button>
+            <button type="submit" id="subtraction">-</button>
+            <button type="submit" id="multiplication">*</button>
+            <button type="submit" id="division">/</button>
+          </div>
+
+          <div class="btn-reset">
+            <button type="submit">Reset</button>
+          </div>
+        </div>
+        <div class="result-box">
+          <h2 id="result"></h2>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
